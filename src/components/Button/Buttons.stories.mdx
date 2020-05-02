@@ -1,0 +1,45 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { action } from "@storybook/addon-actions";
+import { PrimaryButton, SecondaryButton, TertiaryButton } from "./Button";
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+
+<Meta title="Design System|Buttons" component={PrimaryButton} />
+
+# Buttons
+
+Buttons are used to trigger actions within an application.
+
+## Usage
+
+Buttons are used to trigger internal actions within web applications
+
+## Primary Buttons
+
+Primary buttons are used as a call to action and indcate the most important action on a page
+
+<Preview withtoolbar>
+  <Story name="primary">
+    <div>
+      <PrimaryButton modifiers={['small']} onClick={action('button-click')}>Hello World</PrimaryButton>
+      <PrimaryButton disabled={boolean('disabled', false)} onClick={action('button-click')}>Hello World</PrimaryButton>
+      <PrimaryButton modifiers={['large']} onClick={action('button-click')}>Hello World</PrimaryButton>
+      <PrimaryButton modifiers={['success']} onClick={action('button-click')}>Hello World</PrimaryButton>
+      <PrimaryButton modifiers={['warning']} onClick={action('button-click')}>Hello World</PrimaryButton>
+      <PrimaryButton modifiers={['error']} onClick={action('button-click')}>Hello World</PrimaryButton>
+    </div>
+  </Story>
+  <Story name="secondary">
+    <div>
+      <SecondaryButton modifiers={['small']} onClick={action('button-click')}>Hello World</SecondaryButton>
+      <SecondaryButton disabled={boolean('disabled', false)} onClick={action('button-click')}>Hello World</SecondaryButton>
+      <SecondaryButton modifiers={['large']} onClick={action('button-click')}>Hello World</SecondaryButton>
+    </div>
+  </Story>
+  <Story name="tertiary">
+    <div>
+      <TertiaryButton modifiers={['small']} onClick={action('button-click')}>Hello World</TertiaryButton>
+      <TertiaryButton disabled={boolean('disabled', false)} onClick={action('button-click')}>Hello World</TertiaryButton>
+      <TertiaryButton modifiers={['large']} onClick={action('button-click')}>Hello World</TertiaryButton>
+    </div>
+  </Story>
+</Preview>

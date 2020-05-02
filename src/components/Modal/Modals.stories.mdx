@@ -1,0 +1,19 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
+import { action } from "@storybook/addon-actions";
+import { SignUpModal } from "./Modal";
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+
+<Meta title="Design System|Modals" component={SignUpModal} />
+
+# Modal
+
+Modals are used to show information above the page
+
+<Preview withtoolbar>
+  <Story name="modal">
+    <SignUpModal
+      showModal={boolean('Show modal', true)}
+      setShowModal={action('show-hide-modal')}
+    ></SignUpModal>
+  </Story>
+</Preview>
